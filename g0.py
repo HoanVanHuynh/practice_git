@@ -15,8 +15,7 @@ self_employees = [
                 'role': 'sales'
             },
         ]
-def employees():
-        return [_create_employee(**data) for data in self_employees]      
+   
 
 def _create_employee( id, name, role): # This unpacks the Dict before sending it
     # so it can be received be the function as separate variables.
@@ -24,4 +23,16 @@ def _create_employee( id, name, role): # This unpacks the Dict before sending it
         employee_role = name
         payroll_policy = role
         return address, employee_role, payroll_policy
-print(employees())        
+
+def employees():
+        return [_create_employee(**data) for data in self_employees]   
+        
+#print(employees())        
+
+def unpack_it(x,y,z):
+    print(x)
+    print(y)
+    print(z)
+data = ['NoOneLikes', 'FeelingStupiderThanTheNextPerson']
+
+print(unpack_it(*data))    
